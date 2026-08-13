@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soporte de Polaris</title>
+    <meta
+      name="description"
+      content="Página de soporte de Polaris, la app para puntuar cervezas y ayudar a enfriar las birras del mundo."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3fbfe;
+        --ink: #12324a;
+        --muted: #5f7887;
+        --line: #dcebf0;
+        --ice: #39bbd3;
+        --orange: #ff6b5f;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+
+      main {
+        width: min(860px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 42px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+      }
+
+      .mark {
+        display: grid;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--ink);
+        color: var(--white);
+        font-size: 24px;
+      }
+
+      .hero {
+        padding: 34px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--white);
+        box-shadow: 0 24px 50px rgba(18, 50, 74, 0.08);
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 680px;
+        font-size: clamp(36px, 6vw, 64px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 650px;
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      a.button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0 22px;
+        background: var(--orange);
+        color: var(--ink);
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      a.secondary {
+        background: #e7fafe;
+        border: 1px solid #bdebf4;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      section {
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--white);
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 22px;
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 12px 0 0;
+        padding-left: 20px;
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 6px;
+      }
+
+      a {
+        color: #147b91;
+      }
+
+      footer {
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 680px) {
+        main {
+          padding: 32px 0;
+        }
+
+        .hero {
+          padding: 24px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand" aria-label="Polaris">
+        <div class="mark" aria-hidden="true">✦</div>
+        <span>POLARIS</span>
+      </div>
+
+      <div class="hero">
+        <h1>Soporte de Polaris</h1>
+        <p class="intro">
+          Polaris es una app para puntuar la temperatura de las cervezas y ayudar a enfriar las birras del mundo.
+          Si tienes un problema, una duda o quieres pedir la eliminación de tu cuenta, estamos aquí para ayudarte.
+        </p>
+        <div class="actions">
+          <a class="button" href="https://github.com/decause95/polaris-support/issues/new">Abrir solicitud de soporte</a>
+          <a class="button secondary" href="https://github.com/decause95/polaris-support/issues">Ver solicitudes</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section>
+          <h2>Ayuda con la app</h2>
+          <p>Abre una solicitud si necesitas ayuda con:</p>
+          <ul>
+            <li>Inicio de sesión o creación de cuenta.</li>
+            <li>Problemas al valorar una cerveza.</li>
+            <li>Ubicación o selección de bares.</li>
+            <li>Errores en estadísticas o rankings.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Cuenta y datos</h2>
+          <p>
+            Puedes pedir ayuda para eliminar tu cuenta o tus datos desde una solicitud de soporte.
+            No incluyas contraseñas, códigos de verificación ni información sensible.
+          </p>
+        </section>
+
+        <section>
+          <h2>Privacidad</h2>
+          <p>
+            Polaris usa tu ubicación solo cuando la autorizas, para sugerirte bares cercanos al crear una valoración.
+            Las solicitudes de privacidad también se gestionan desde soporte.
+          </p>
+        </section>
+
+        <section>
+          <h2>Estado</h2>
+          <p>
+            Si detectas un fallo, describe que estabas intentando hacer, el dispositivo que usas y cualquier mensaje
+            de error que aparezca.
+          </p>
+        </section>
+      </div>
+
+      <footer>
+        © 2026 Polaris. Soporte para la app Polaris.
+      </footer>
+    </main>
+  </body>
+</html>
