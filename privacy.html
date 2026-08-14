@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Política de privacidad de Polaris</title>
+    <meta
+      name="description"
+      content="Política de privacidad de Polaris, la app para puntuar cervezas y enfriar las birras del mundo."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3fbfe;
+        --ink: #12324a;
+        --muted: #5f7887;
+        --line: #dcebf0;
+        --ice: #39bbd3;
+        --orange: #ff6b5f;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(860px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 32px;
+        font-weight: 900;
+        letter-spacing: 0.18em;
+      }
+
+      .mark {
+        display: grid;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--ink);
+        color: var(--white);
+        font-size: 24px;
+      }
+
+      article {
+        padding: 34px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--white);
+        box-shadow: 0 24px 50px rgba(18, 50, 74, 0.08);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 30px 0 10px;
+        font-size: 22px;
+        line-height: 1.15;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 20px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      a {
+        color: #147b91;
+      }
+
+      .updated {
+        color: #238fa5;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      footer {
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 680px) {
+        main {
+          padding: 32px 0;
+        }
+
+        article {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="brand" href="./" aria-label="Volver a soporte de Polaris">
+        <span class="mark" aria-hidden="true">✦</span>
+        <span>POLARIS</span>
+      </a>
+
+      <article>
+        <p class="updated">Última actualización: 14 de agosto de 2026</p>
+        <h1>Política de privacidad</h1>
+        <p>
+          Polaris es una app para puntuar la temperatura de las cervezas y ayudar a enfriar las birras del mundo.
+          Esta política explica qué datos se tratan al usar la app, para qué se usan y cómo puedes solicitar ayuda.
+        </p>
+
+        <h2>Datos de cuenta</h2>
+        <p>
+          Para guardar valoraciones, Polaris usa Clerk como proveedor de autenticación. Puedes iniciar sesión con
+          Apple, Google o email y contraseña. Polaris puede tratar el identificador de usuario de Clerk, tu nombre
+          visible, avatar y dirección de email cuando esos datos están disponibles en tu cuenta.
+        </p>
+        <p>
+          Estos datos se usan para iniciar sesión, mostrar tu perfil, vincular tus valoraciones a tu cuenta y permitir
+          la eliminación de cuenta desde la app. Polaris no guarda contraseñas ni tokens de sesión en su base de datos.
+        </p>
+
+        <h2>Valoraciones y locales</h2>
+        <p>
+          Al enviar una valoración, Polaris guarda la marca de cerveza elegida, la puntuación de frío, la fecha de la
+          valoración y el local seleccionado. Del local se conserva el identificador del proveedor, nombre, dirección,
+          localidad, categorías y coordenadas del establecimiento.
+        </p>
+        <p>
+          Las coordenadas guardadas describen el bar, restaurante, pub o cafetería seleccionado, no la ubicación
+          personal del usuario.
+        </p>
+
+        <h2>Ubicación opcional</h2>
+        <p>
+          Polaris solo solicita tu ubicación cuando pulsas la acción para buscar locales cercanos. Si concedes permiso,
+          la app obtiene una ubicación actual y la envía a la API de Polaris para sugerir bares, restaurantes, pubs o
+          cafeterías cercanos mediante Geoapify.
+        </p>
+        <p>
+          La app no solicita ubicación en segundo plano, no hace seguimiento continuo y no crea un historial de
+          ubicaciones personales. También puedes buscar locales escribiendo el nombre sin conceder permiso de ubicación.
+        </p>
+
+        <h2>Identificador técnico de instalación</h2>
+        <p>
+          Polaris genera un identificador aleatorio de instalación y lo guarda en el dispositivo. Se envía a la API para
+          aplicar límites de uso y proteger el servicio frente a abuso. No se usa para publicidad ni para seguimiento
+          entre apps o sitios web.
+        </p>
+
+        <h2>Proveedores</h2>
+        <p>Polaris utiliza estos proveedores para operar la app:</p>
+        <ul>
+          <li>Clerk, para autenticación y gestión de cuentas.</li>
+          <li>Cloudflare Workers, para ejecutar la API de Polaris y aplicar límites de uso.</li>
+          <li>Neon, para almacenar valoraciones, locales y datos mínimos de cuenta.</li>
+          <li>Geoapify, para buscar locales y sugerir resultados cercanos cuando usas la ubicación o una búsqueda.</li>
+          <li>Apple y Google, cuando eliges iniciar sesión con esos proveedores.</li>
+        </ul>
+
+        <h2>Finalidades</h2>
+        <p>Los datos se usan para:</p>
+        <ul>
+          <li>crear y mantener tu cuenta;</li>
+          <li>guardar y mostrar tus valoraciones;</li>
+          <li>buscar locales y sugerir resultados cercanos;</li>
+          <li>mostrar estadísticas y rankings agregados;</li>
+          <li>prevenir abuso, duplicados y uso excesivo de la API;</li>
+          <li>diagnosticar errores y mantener el servicio.</li>
+        </ul>
+
+        <h2>Sin tracking publicitario</h2>
+        <p>
+          Polaris no vende datos personales, no muestra anuncios y no utiliza tus datos para tracking publicitario entre
+          apps o sitios web de otras empresas.
+        </p>
+
+        <h2>Eliminación de cuenta y datos</h2>
+        <p>
+          Puedes eliminar tu cuenta desde la app, en el perfil de usuario. Esa acción solicita la eliminación de tu
+          perfil de Polaris, tus valoraciones asociadas y la cuenta de identidad gestionada por Clerk.
+        </p>
+        <p>
+          Si necesitas ayuda adicional, abre una solicitud en
+          <a href="https://github.com/decause95/polaris-support/issues/new">soporte de Polaris</a>. No incluyas
+          contraseñas, códigos de verificación ni información sensible en la solicitud.
+        </p>
+
+        <h2>Contacto</h2>
+        <p>
+          Para preguntas de privacidad, solicitudes de acceso o eliminación, utiliza
+          <a href="https://github.com/decause95/polaris-support/issues/new">la página de soporte</a>.
+        </p>
+      </article>
+
+      <footer>
+        © 2026 Polaris. <a href="./">Soporte</a>.
+      </footer>
+    </main>
+  </body>
+</html>
